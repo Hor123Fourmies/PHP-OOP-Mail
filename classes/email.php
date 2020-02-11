@@ -32,40 +32,34 @@ class email
 
     public function __construct($to, $from, $subject, $message)
     {
-        $this->to = $to;
-        $this->from = $from;
-        $this->subject = $subject;
-        $this->message = $message;
+        $this->to = "hortensere@aol.com";
+        $this->from = "hortensere@aol.com";
+        $this->subject = "Test";
+        $this->message = "Ceci est un test";
+
 
         if (mail($to, $from, $subject, $message))
         {
             echo "message envoyé";
         }
-    }
+        else{
+            echo "erreur";
+        }
 
-    public function destinataire($to) {
-        $this->to = "hortensere@aol.com";
-    }
-
-    public function expediteur($from) {
-        $this->from = "hortensere@aol.com";
-    }
-
-    public function sujet($subject) {
-        $this->subject = "Test mail PHP";
-    }
-
-    public function message ($message){
-        $this->message = "Ceci est un test";
     }
 
 
     public function envoyer() {
-       // $this->destinataire()->expediteur()->sujet()->message();
+        $this->destinataire()->expediteur()->sujet()->message();
+
+
+
+       /*
         $this->destinataire($this->to);
         $this->expediteur($this->from);
         $this->sujet($this->subject);
         $this->message($this->message);
+       */
     }
 
 }

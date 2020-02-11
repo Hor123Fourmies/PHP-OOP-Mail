@@ -40,7 +40,7 @@ class email
 
         if (mail($to, $from, $subject, $message))
         {
-            echo "message envoyé";
+            echo "Votre message a bien été envoyé.";
         }
         else{
             echo "erreur";

@@ -32,8 +32,8 @@ class email
 
     public function __construct($to, $from, $subject, $message)
     {
-        $this->to = "hortensere@aol.com";
-        $this->from = "hortensere@aol.com";
+        $this->to = "";
+        $this->from = "";
         $this->subject = "Test";
         $this->message = "Ceci est un test";
 
